@@ -14,6 +14,6 @@ namespace SoccerOrganizer.Models
         public int TeamId { get; set; }
         public int DivisionId { get; set; }
         public string Name { get; set; }
-        public string Capitain { get; set; }
+        public string Captain { get; set; }
     }
 }
