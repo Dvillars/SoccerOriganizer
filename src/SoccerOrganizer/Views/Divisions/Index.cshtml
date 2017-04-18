@@ -1,7 +1,16 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Soccer List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@model IEnumerable<SoccerOrganizer.Models.Division>
 
+
+<h2>Soccer Organizer</h2>
+<h4>@Html.DisplayNameFor(model => model.Name)</h4>
+<ul>
+    @foreach(var division in Model)
+        {
+        <li>@Html.DisplayFor(modelDivision => division.Name) | @Html.ActionLink("Details", "Details", new { id = division.DivisionId }) | @Html.ActionLink("Edit", "Edit", new { id = division.DivisionId }) | @Html.ActionLink("Delete", "Delete", new { id = division.DivisionId })</li>
+        }
+</ul>
 <p>@Html.ActionLink("Add new item", "Create")</p>

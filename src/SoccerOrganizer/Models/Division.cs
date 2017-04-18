@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SoccerOrganizer.Models
 {
-    [Table("Division")]
+    [Table("Divisions")]
     public class Division
     {
         [Key]
