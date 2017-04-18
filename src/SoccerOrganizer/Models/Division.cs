@@ -15,5 +15,6 @@ namespace SoccerOrganizer.Models
         public string Name { get; set; }
         public int MaxTeams { get; set; }
         public string SkillLevel { get; set; }
+
     }
 }

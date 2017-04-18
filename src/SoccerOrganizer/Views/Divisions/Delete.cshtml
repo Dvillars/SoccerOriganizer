@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    ViewData["Title"] = "Soccer List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model SoccerOrganizer.Models.Division
+
+<h2>Are you sure you want to delete this division???</h2>
+@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Delete" />
+}
+@Html.ActionLink("Back to list", "Index")
+
+
+

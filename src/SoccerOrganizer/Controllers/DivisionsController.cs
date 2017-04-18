@@ -43,5 +43,20 @@ namespace SoccerOrganizer.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public IActionResult Delete(int id)
+        {
+            var thisItem = db.Divisions.FirstOrDefault(divisions => divisions.DivisionId == id);
+            return View(thisItem);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var thisDivision = db.Divisions.FirstOrDefault(divisions => divisions.DivisionId == id);
+            db.Divisions.Remove(thisDivision);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
