@@ -1,0 +1,27 @@
+﻿
+
+@{
+    ViewData["Title"] = "Soccer List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@model SoccerOrganizer.Models.Division
+
+<h2>Create </h2>
+<hr />
+<h4>Add a new division</h4>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+
+    @Html.LabelFor(model => model.MaxTeams)
+    @Html.TextBoxFor(model => model.MaxTeams)
+
+    @Html.LabelFor(model => model.SkillLevel)
+    @Html.TextBoxFor(model => model.SkillLevel)
+    <input type="submit" value="Add new division" />
+}
+
+<p>@Html.ActionLink("Back to Divisions", "Index")</p>
